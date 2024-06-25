@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="CV"
+             x:Class="App3.Views.HomePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="cv" HasUnevenRows="True" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem 
+                                      x:Name="BtnDelete"
+                                      Text="Eliminar"
+                                      IsDestructive="True"
+                                      Clicked="BtnDelete_Clicked"
+                                      CommandParameter="{Binding .}"
+                                      >
+
+                            </MenuItem>
+                        </ViewCell.ContextActions>
+                        
+                        <StackLayout Padding="15,0">
+                            <Label Text="Nombre y Apellido" FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+                            <Label Text="{Binding Name}" FontSize="Body" TextColor="Black"></Label>
+                            <Label Text="Ocupación" FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+                            <Label Text="{Binding Ocupacion}" FontSize="Body" TextColor="Black"></Label>
+                            <Label Text="Contacto" FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+                            <Label Text="{Binding Contacto}" FontSize="Body" TextColor="Black"></Label>
+                            <Label Text="Correo" FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+                            <Label Text="{Binding Correo}" FontSize="Body" TextColor="Black"></Label>
+                            <Label Text="Idiomas" FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+                            <Label Text="{Binding Idiomas}" FontSize="Body" TextColor="Black"></Label>
+                            <Label Text="Aptitudes" FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+                            <Label Text="{Binding Aptitudes}" FontSize="Body" TextColor="Black"></Label>
+                            <Label Text="Habilidades" FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+                            <Label Text="{Binding Habilidades}" FontSize="Body" TextColor="Black"></Label>
+                            <Label Text="Experiencia Laboral" FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+                            <Label Text="{Binding Experiencia}" FontSize="Body" TextColor="Black"></Label>
+                            <!--<Label Text="Formacion Academica" FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+                            <Label Text="{Binding Formacion}" FontSize="Body" TextColor="Black"></Label>-->
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

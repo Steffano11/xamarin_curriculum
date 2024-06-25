@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Curriculum Vitae"
+             x:Class="App3.Views.AddPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Guardar" x:Name="BtnGuardar" Clicked="BtnGuardar_Click"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Label Text="Nombre y Apellido: " FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+            <Entry x:Name="Nombre"></Entry>
+            <Label Text="Ocupacion: " FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+            <Entry x:Name="Ocupacion"></Entry>
+            <Label Text="Contacto: " FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+            <Entry x:Name="Contacto"></Entry>
+            <Label Text="Correo: " FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+            <Entry x:Name="Correo"></Entry>
+            <Label Text="Idiomas: " FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+            <Entry x:Name="Idiomas"></Entry>
+            <Label Text="Aptitudes: " FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+            <Editor x:Name="Aptitudes" HeightRequest="80"></Editor>
+            <Label Text="Habilidades: " FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+            <Editor x:Name="Habilidades" HeightRequest="80"></Editor>
+            <Label Text="Experiencia Laboral: " FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+            <Editor x:Name="Experiencia" HeightRequest="80"></Editor>
+            <!--<Label Text="Formacion: " FontSize="Medium" TextColor="{StaticResource colorAccent}"></Label>
+            <Editor x:Name="Formacion" HeightRequest="80"></Editor>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
